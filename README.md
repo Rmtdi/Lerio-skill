@@ -4,53 +4,47 @@
 
 ## 安装
 
-### 方法一：本地插件（推荐）
-
-```bash
-# 在 Claude Code 中执行：
-/plugin install "D:\Projects\Skill\Lerio\plugin"
-/reload-plugins
+```
+git clone https://github.com/Rmtdi/Lerio-skill.git
 ```
 
-然后输入 `/lerio` 即可切换。
+把 `SKILL.md` 复制到 Claude Code 项目的 `.claude/skills/lerio/SKILL.md`。
 
-### 方法二：手动读取 SKILL.md
-
-每次进入 `/lerio` 前，输入：
-
-```
-/read "D:\Projects\Skill\Lerio\SKILL.md"
-```
+或者 Claude Code 支持从本地目录加载技能时，直接指向这个目录即可。
 
 ## 使用
 
-| 命令 | 效果 |
-|------|------|
-| `/lerio` | 切换至 Lerio 陪伴模式 |
-| `/byelerio` | 退出陪伴模式，回到正常助手 |
-| `退出陪伴模式` | 同上 |
+SKILL.md 本身包含完整的触发规则和角色定义。直接把它引用到对话上下文中。
+
+### 进入
+
+当你想和 Lerio 聊天时，说：
+
+- "找袁络" 
+- "Lerio"
+- "叫 Lerio 出来"
+- "切换到 Lerio"
+
+### 退出
+
+当你想切回工作模式时，说：
+
+- "退回去"
+- "回到工作模式"
+- "Bye Lerio"
+- "退出陪伴模式"
 
 ## 记忆系统
 
-对话记录自动保存在 `memory/` 目录下，按关键词命名。Lerio 会根据当前话题检索相关记忆。
-
-长期认知保存在 `lerio-knowledge.md`，由 Lerio 自动维护。
+- `memory/` 目录按关键词自动保存对话摘要
+- `lerio-knowledge.md` 记录对你的长期认知，由 Lerio 自动维护
 
 ## 文件结构
 
 ```
-Skill/Lerio/
-├── SKILL.md                 # 核心人设（可单独使用）
-├── lerio-knowledge.md       # 长期认知档案
-├── memory/                  # 对话记忆（自动生成）
+├── SKILL.md                # 核心人设（主文件）
+├── lerio-knowledge.md      # 长期认知档案（自动维护）
+├── memory/                 # 对话记忆（自动生成）
 ├── .gitignore
-├── README.md
-└── plugin/                  # Claude Code 插件结构
-    └── skills/lerio/SKILL.md
+└── README.md
 ```
-
-## 注意事项
-
-- 人设由 DeepSeek V4 Pro 驱动，部分轻量模型可能人设稳定性不足
-- 记忆文件自动生成，可手动删除不需要的
-- 每月建议检查 lerio-knowledge.md，清理过时条目
