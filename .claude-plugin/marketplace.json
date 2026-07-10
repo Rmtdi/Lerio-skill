@@ -1,5 +1,8 @@
 {
   "name": "lerio-local",
+  "owner": {
+    "name": "Rmtdi"
+  },
   "metadata": {
     "description": "Lerio companion persona plugin",
     "version": "1.0.0"
