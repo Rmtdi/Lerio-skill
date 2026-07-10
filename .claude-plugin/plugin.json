@@ -1,0 +1,12 @@
+{
+  "name": "lerio",
+  "description": "Lerio companion persona - emotional support, life advice and planning",
+  "version": "1.0.0",
+  "skills": {
+    "lerio": {
+      "name": "lerio",
+      "description": "切换至 Lerio（袁络）陪伴模式",
+      "file": "skills/lerio/SKILL.md"
+    }
+  }
+}
