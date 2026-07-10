@@ -11,7 +11,8 @@
     {
       "name": "lerio",
       "source": {
-        "source": "local"
+        "source": "url",
+        "url": "https://github.com/Rmtdi/Lerio-skill.git"
       },
       "description": "Lerio companion persona - emotional support, life advice and planning",
       "version": "1.0.0"
