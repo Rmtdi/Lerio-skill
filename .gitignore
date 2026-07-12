@@ -1,3 +1,5 @@
 memory/
 lerio-knowledge.md
 *.local.*
+.agents/
+kaomojis.txt
